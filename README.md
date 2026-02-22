@@ -1,142 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YFIX_UZ | Minecraft Mods & Skins</title>
+<title>YFIX_UZ ULTIMATE PRO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#0f0f0f,#1a1a1a,#000000);
-color:white;
-text-align:center;
+    font-family:'Orbitron',sans-serif;
+    background:#0a0a0a;
+    color:white;
+    overflow-x:hidden;
 }
-
 header{
-padding:40px;
-font-size:40px;
-font-weight:bold;
-background:linear-gradient(90deg,green,lime);
--webkit-background-clip:text;
-color:transparent;
-animation:glow 2s infinite alternate;
+    background:linear-gradient(90deg,#00ffcc,#0066ff);
+    padding:25px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    animation:glow 2s infinite alternate;
 }
-
 @keyframes glow{
-from{ text-shadow:0 0 10px lime;}
-to{ text-shadow:0 0 30px green;}
+    from{box-shadow:0 0 10px #00ffcc;}
+    to{box-shadow:0 0 25px #0066ff;}
 }
-
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:15px;
+    background:#111;
+}
+nav button{
+    padding:10px 20px;
+    background:black;
+    color:#00ffcc;
+    border:2px solid #00ffcc;
+    border-radius:8px;
+    cursor:pointer;
+}
+nav button:hover{
+    background:#00ffcc;
+    color:black;
+}
 .section{
-padding:40px;
+    display:none;
+    padding:40px;
+    text-align:center;
 }
+.active{display:block;}
 
 .card{
-background:#111;
-margin:20px auto;
-padding:20px;
-width:80%;
-border-radius:15px;
-box-shadow:0 0 15px green;
-transition:0.3s;
+    background:#111;
+    margin:20px auto;
+    padding:20px;
+    width:90%;
+    max-width:400px;
+    border-radius:15px;
+    box-shadow:0 0 15px #00ffcc;
+    transition:0.3s;
 }
-
 .card:hover{
-transform:scale(1.05);
-box-shadow:0 0 25px lime;
+    transform:scale(1.05);
+    box-shadow:0 0 25px #0066ff;
 }
-
-button{
-padding:15px 30px;
-background:green;
-border:none;
-color:white;
-font-size:18px;
-border-radius:10px;
-cursor:pointer;
-transition:0.3s;
+button.download{
+    margin-top:15px;
+    padding:10px 20px;
+    background:#00ffcc;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
 }
-
-button:hover{
-background:lime;
-color:black;
+input{
+    padding:10px;
+    margin:10px;
+    width:250px;
+    border-radius:8px;
+    border:none;
 }
-
 footer{
-padding:20px;
-background:black;
-margin-top:40px;
-font-size:14px;
-color:gray;
+    background:black;
+    padding:20px;
+    text-align:center;
+    margin-top:40px;
 }
 </style>
-
-<script>
-function downloadMod(mod){
-alert("🔥 " + mod + " downloaded successfully! 🔥");
-}
-
-function proMode(){
-alert("🚀 YFIX_UZ PRO MODE ACTIVATED 🚀");
-}
-</script>
-
 </head>
 <body>
 
-<header>YFIX_UZ OFFICIAL MINECRAFT HUB</header>
+<header>
+🔥 YFIX_UZ ULTIMATE PRO 🔥
+</header>
 
-<div class="section">
-<h2>🔥 Exclusive Mods</h2>
+<nav>
+<button onclick="show('home')">Home</button>
+<button onclick="show('mods')">Mods</button>
+<button onclick="show('skins')">Skins</button>
+<button onclick="show('login')">Login</button>
+<button onclick="show('admin')">Admin</button>
+</nav>
 
-<div class="card">
-<h3>Ultra FPS Booster Mod</h3>
-<p>This mod increases FPS dramatically, reduces lag and makes gameplay smooth even on low-end devices.</p>
-<button onclick="downloadMod('Ultra FPS Booster Mod')">Download</button>
+<!-- HOME -->
+<div id="home" class="section active">
+<h2>Welcome Boss 😎</h2>
+<p>Bu YFIX_UZ rasmiy mega Minecraft portali!</p>
 </div>
 
-<div class="card">
-<h3>Shadow Power Shader Lite</h3>
-<p>Beautiful lighting, realistic shadows and optimized performance for 4GB devices.</p>
-<button onclick="downloadMod('Shadow Power Shader Lite')">Download</button>
-</div>
+<!-- MODS -->
+<div id="mods" class="section">
+<h2>🔥 TOP MODLAR</h2>
 
 <div class="card">
-<h3>YFIX_UZ PvP Enhancer</h3>
-<p>Improves combat animations, faster hit response and clean PvP experience.</p>
-<button onclick="downloadMod('YFIX_UZ PvP Enhancer')">Download</button>
-</div>
-
-</div>
-
-<div class="section">
-<h2>🧑‍🎮 Premium Skins</h2>
-
-<div class="card">
-<h3>YFIX_UZ Shadow Suit</h3>
-<p>Black and white split mask skin with premium suit design. Legendary style.</p>
-<button onclick="downloadMod('YFIX_UZ Shadow Suit Skin')">Download</button>
+<h3>⚡ FPS BOOSTER PRO</h3>
+<p>Lagni yo‘q qiladi va FPS oshiradi.</p>
+<button class="download" onclick="download()">Download</button>
 </div>
 
 <div class="card">
-<h3>Neon Hacker Skin</h3>
-<p>Green neon lines with futuristic hacker look.</p>
-<button onclick="downloadMod('Neon Hacker Skin')">Download</button>
+<h3>👑 VIP YFIX_UZ MOD</h3>
+<p>Maxsus armor, qilich va kuchli effektlar.</p>
+<button class="download" onclick="download()">Download</button>
 </div>
 
 </div>
 
-<div class="section">
-<h2>🚀 Activate Pro Mode</h2>
-<p>Unlock secret animations and hidden features!</p>
-<button onclick="proMode()">Activate PRO</button>
+<!-- SKINS -->
+<div id="skins" class="section">
+<h2>🎭 YFIX_UZ SKINS</h2>
+
+<div class="card">
+<h3>🖤 Masked Boss Skin</h3>
+<p>Black & White split mask rasmiy skin.</p>
+<button class="download" onclick="download()">Download</button>
+</div>
+
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="section">
+<h2>🔐 Login</h2>
+<input type="text" placeholder="Username"><br>
+<input type="password" placeholder="Password"><br>
+<button class="download" onclick="login()">Login</button>
+</div>
+
+<!-- ADMIN -->
+<div id="admin" class="section">
+<h2>🛠 Admin Panel</h2>
+<p>Yangi mod qo‘shish:</p>
+<input type="text" id="modname" placeholder="Mod nomi">
+<br>
+<button class="download" onclick="addMod()">Qo‘shish</button>
+
+<div id="newmods"></div>
 </div>
 
 <footer>
-© 2026 YFIX_UZ Official Minecraft Mods & Skins Website. All rights reserved.
+© 2026 YFIX_UZ | Ultimate Edition
 </footer>
+
+<script>
+function show(section){
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    document.getElementById(section).classList.add('active');
+}
+
+function download(){
+    alert("🔥 Yuklash boshlandi YFIX_UZ 🔥");
+}
+
+function login(){
+    alert("Xush kelibsiz Boss 😎");
+}
+
+function addMod(){
+    let name=document.getElementById("modname").value;
+    if(name==="") return;
+    let div=document.createElement("div");
+    div.className="card";
+    div.innerHTML="<h3>"+name+"</h3><p>Yangi qo‘shilgan mod</p>";
+    document.getElementById("newmods").appendChild(div);
+}
+</script>
 
 </body>
 </html>
